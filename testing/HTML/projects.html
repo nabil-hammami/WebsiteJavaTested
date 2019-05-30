@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="../JS/projects.js"></script>
+</head>
+<body style="background-color: rgba(255, 255, 255, 0.1)">
+<article class="projects">
+    <h1 id="projectsTitle">Projects</h1>
+    <section id="OnlineStore">
+        <h3>Online Store :
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#projectOnLineStore">Details
+            </button>
+        </h3>
+        <p>
+            Click <a href="eCommerceLogin.html" target="_blank">here</a> to go (It will open in a new page/tab)
+        </p>
+
+        <div id="projectOnLineStore" class="collapse">
+            <!-- APPROACH -->
+            <h4>The chosen approach to create the website</h4>
+            <img src="../IMG/onlineStoreWorkflow.png">
+            <!-- FEATURES -->
+            <h4>The features I want for the login page</h4>
+            <div class="Gherkin">
+                <span><span
+                        id="keyword">Feature:</span> Project Online Store : Authentication on the login page<br></span>
+                <span>  Only registered customer should be able to log in<br></span>
+                <span>  Valid credentials are login=Peter and password=Parker<br><br></span>
+                <span>  <span
+                        id="keyword">Scenario:</span> I shouldn't be able to log in if the login is missing<br></span>
+                <span>    <span id="keyword">Given</span> I am connected on the log in page<br></span>
+                <span>    <span id="keyword">When</span> I fill the password<br></span>
+                <span>    <span id="keyword">And</span> the login is empty<br></span>
+                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
+                <span>    <span id="keyword">Then</span> an error message telling me "The login is mandatory" must be displayed<br><br></span>
+                <span>  <span id="keyword">Scenario:</span> I shouldn't be able to login if the password is missing<br></span>
+                <span>    <span id="keyword">Given</span> I am connected on the log in page<br></span>
+                <span>    <span id="keyword">When</span> I fill the login<br></span>
+                <span>    <span id="keyword">And</span> the password is empty<br></span>
+                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
+                <span>    <span id="keyword">Then</span> an error message saying "The password is mandatory" must be displayed<br><br></span>
+
+                <span>  <span id="keyword">Scenario:</span> As a registered user, I should be able to log in with my login and password<br></span>
+                <span>    <span id="keyword">Given</span> I am a registered user<br></span>
+                <span>    <span id="keyword">When</span> I fill my login<br></span>
+                <span>    <span id="keyword">And</span> I fill my password<br></span>
+                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
+                <span>    <span id="keyword">Then</span> the Order page must be displayed<br><br></span>
+
+                <span>  <span id="keyword">Scenario:</span> Login and passwords are case sensitive<br></span>
+                <span>    <span id="keyword">Given</span> I am a registered user<br></span>
+                <span>    <span id="keyword">When</span> I fill a &lt;login&gt;<br></span>
+                <span>    <span id="keyword">And</span> I fill a &lt;password&gt;<br></span>
+                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
+                <span>    <span id="keyword">Then</span> an error message saying "Invalid credentials" must be displayed<br></span>
+                <span>    <span id="keyword">Examples:</span><br></span>
+                <span>        | login | password |<br></span>
+                <span>        | peter | parker   |<br></span>
+                <span>        | pEtEr | pArkeR   |<br><br></span>
+
+                <span>  <span
+                        id="keyword">Scenario:</span> I shouldn't be able to log in with invalid credentials<br></span>
+                <span>    <span id="keyword">Given</span> I am not a registered user<br></span>
+                <span>    <span id="keyword">When</span> I fill a &lt;login&gt;<br></span>
+                <span>    <span id="keyword">And</span> I fill a &lt;password&gt;<br></span>
+                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
+                <span>    <span id="keyword">Then</span> an error message saying "Invalid credentials" must be displayed<br></span>
+                <span>    <span id="keyword">Examples</span><br></span>
+                <span>        | login | password |<br></span>
+                <span>        | admin | 1234     |<br></span>
+                <span>        | Chuck | Norris   |<br></span>
+            </div>
+            <!-- MOCK UP -->
+            <h4> Mock-up of the goal. </h4>
+            <p>
+                A first page to authenticate the customer...
+            </p>
+            <p>
+                <img src="../IMG/onlineStoreMaquetteLoginPage.png">
+            </p>
+            <p>and a second one to manage orders.</p>
+            <p>
+                <img src="../IMG/onlineStoreMaquetteOrdersPage.png">
+            </p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#projectOnLineStore">Up
+            </button>
+        </div>
+    </section>
+</article>
+</body>
+</html>

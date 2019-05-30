@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+    <script src="../JS/eCommerce.js"></script>
+</head>
+<body id="eCommerceLoginBody">
+<!-- Main Title-->
+<h1>Welcome to your online store</h1>
+<br><br><br>
+<h3>
+    <span id="helper">   To enter, use Peter/Parker as Login/Password   </span>
+</h3>
+<br><br><br>
+<form>
+    <p>
+        <input type="text" id="eCommerceLogin" maxlength="20" placeholder="LOGIN" size="22" autofocus>
+    </p>
+    <p>
+        <input type="password" id="eCommercePassword" maxlength="20" placeholder="PASSWORD" size="22">
+    </p>
+    <p>
+        <input type="button" id="eCommerceSubmit" value="Log In" onclick="clickSubmit()">
+    </p>
+</form>
+<span id="loginErrorMessage">Error Message</span>
+</body>
+</html>

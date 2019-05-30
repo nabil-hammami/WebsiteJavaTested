@@ -1,0 +1,114 @@
+[
+  {
+    "description": "  Only registered customer should be able to log in\n  Valid credentials are login=Peter and password=Parker",
+    "keyword": "Feature",
+    "name": "Project Online Store : Authentication on the login page",
+    "line": 1,
+    "id": "project-online-store-:-authentication-on-the-login-page",
+    "tags": [],
+    "uri": "features\\eCommerce_login.feature",
+    "elements": [
+      {
+        "id": "project-online-store-:-authentication-on-the-login-page;as-a-registered-user,-i-shouldn't-be-able-to-log-in-if-the-password-is-missing",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "As a registered user, I shouldn't be able to log in if the password is missing",
+        "tags": [
+          {
+            "name": "@eCommerce",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am connected on the log in page",
+            "match": {
+              "location": "features\\step_definitions\\eCommerce_login_stepdefs.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I fill my login",
+            "match": {
+              "location": "features\\step_definitions\\eCommerce_login_stepdefs.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2784000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the password is empty",
+            "match": {
+              "location": "features\\step_definitions\\eCommerce_login_stepdefs.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click on the submit button",
+            "match": {
+              "location": "features\\step_definitions\\eCommerce_login_stepdefs.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 217000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "an error message saying The password is mandatory must be displayed",
+            "match": {
+              "location": "features\\step_definitions\\eCommerce_login_stepdefs.js:59"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 18000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: Input A expected to strictly equal input B:\n+ expected - actual\n\n- 'The login is mandatory'\n+ 'The password is mandatory'\n    + expected - actual\n\n    -The login is mandatory\n    +The password is mandatory\n\n    at C:\\Users\\NABIL\\Documents\\SYNODRIVE\\Programmation\\PROJECTS\\my_site\\features\\step_definitions\\eCommerce_login_stepdefs.js:61:16\n    at process._tickCallback (internal/process/next_tick.js:68:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\Main_navigation_stepdef.js:61"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\step_definitions\\eCommerce_login_stepdefs.js:75"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
