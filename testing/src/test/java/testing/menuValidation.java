@@ -1,6 +1,5 @@
 package testing;
 
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -8,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,13 +14,7 @@ import static junit.framework.TestCase.*;
 
 
 public class menuValidation {
-
-
-//    FirefoxProfile p = new FirefoxProfile();
-//    p.SetPreference("webdriver.log.file","C:\\Temp\\logFirefox.txt");
-
     private WebDriver driver;
-
 
     private boolean isElementPresent(By by) {
         try {
@@ -33,14 +25,10 @@ public class menuValidation {
         }
     }
 
-    @Before
-    public void setUp() throws Exception {
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    }
-
     @Given("I am connected to the website")
     public void i_am_connected_to_the_website() {
+        driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://localhost:63342/testing/index.html");
         //throw new cucumber.api.PendingException();
     }
@@ -116,11 +104,14 @@ public class menuValidation {
 
     @Then("the main frame must contain Logbook")
     public void the_main_frame_must_contain_Logbook() {
-        driver.switchTo().frame(0);
-        String readText = driver.findElement(By.xpath("/html/body/h1")).getText();
-        assertEquals(readText, "Logbook");
-        driver.quit();
-        //TODO Errors management
-        //throw new cucumber.api.PendingException();
+        try {
+            driver.switchTo().frame(0);
+            String readText = driver.findElement(By.xpath("/html/body/h1")).getText();
+            assertEquals(readText, "Logbook");
+            driver.quit();
+        }catch (Error e) {
+            System.out.print(e.toString());
+        }
+
     }
 }

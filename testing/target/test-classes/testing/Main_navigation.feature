@@ -3,7 +3,7 @@ Feature: Navigation via the main Menu
 
   # @Menu is a tag aimed to be used with --tag in shell execution : ./node_modules/.bin/cucumber-js --tags @Menu
   @Menu
-  Scenario Outline: Main menu links must load corresponding pages
+  Scenario Outline: Clicking on <link> link must load <expectedText> page
     Given I am connected to the website
     When I click on the <link> link
     Then the main frame must contain <expectedText>

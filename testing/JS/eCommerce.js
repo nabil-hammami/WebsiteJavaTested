@@ -10,7 +10,7 @@ function clickSubmit() {
     } else if ((login === "Peter") && (password === "Parker")) {
         document.location.href="../HTML/eCommerceOrders.html"
     } else {
-        document.getElementById("loginErrorMessage").innerText = "";
-        document.getElementById("loginErrorMessage").style.display = "none";
+        document.getElementById("loginErrorMessage").style.display = "inline";
+        document.getElementById("loginErrorMessage").innerText = "Invalid credentials";
     }
 }
