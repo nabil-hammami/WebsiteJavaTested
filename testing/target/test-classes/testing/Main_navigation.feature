@@ -8,9 +8,9 @@ Feature: Navigation via the main Menu
     When I click on the <link> link
     Then the main frame must contain <expectedText>
     Examples:
-      | link                | expectedText      |
-      | Home                | Welcome           |
-      | Projects            | Projects          |
-      | Roadmap             | roadmap.png       |
-      | Latest test results | Cucumberjs Report |
-      | Logbook             | Logbook           |
+      | link                | expectedText    |
+#      | Home                | Welcome         |
+#      | Projects            | Projects        |
+#      | Roadmap             | roadmap.png     |
+      | Latest test results | Test Cases |
+#      | Logbook             | Logbook         |

@@ -86,11 +86,11 @@ public class menuValidation {
         //throw new cucumber.api.PendingException();
     }
 
-    @Then("the main frame must contain Cucumberjs Report")
+    @Then("the main frame must contain Test Cases")
     public void the_main_frame_must_contain_Cucumberjs_Report() {
         driver.switchTo().frame(0);
-        String readText = driver.findElement(By.linkText("Cucumberjs Report")).getText();
-        assertEquals(readText, "Cucumberjs Report");
+        String readText = driver.findElement(By.linkText("Test Cases")).getText();
+        assertEquals(readText, "Test Cases");
         driver.quit();
         //TODO Errors management
         //throw new cucumber.api.PendingException();

@@ -6,7 +6,42 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
     <script src="../JS/eCommerce.js"></script>
 </head>
-<body id="eCommerceOrdersBody">
+<body id="eCommerceOrdersBody" onload="setInitialQty()">
+
+<table id="eCommerceTable" style="color: white">
+    <!--    <tr>-->
+    <!--        <td></td>-->
+    <!--        <td></td>-->
+    <!--        <td></td>-->
+    <!--    </tr>-->
+    <tr>
+        <td><h2>Submersible</h2><br><img src="../IMG/titanic.png" width="128" height="100"><br><span
+                class="price">€ 120</span></td>
+        <td><h2>Family car</h2><br><img src="../IMG/Bugatti.png" width="200" height="100"><br><span
+                class="price">€ 99.99</span></td>
+        <td><h2>New iPod by <img src="../IMG/peaches.png" width="30" height="30"></h2><br><img
+                src="../IMG/gramophone.png" width="99" height="100"><br><span class="price">€ 799.99</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Available : <span id="qtySubmersible">_____</span></td>
+        <td>Available : <span id="qtyCar">_____</span></td>
+        <td>Available : <span id="qtyIpod">_____</span></td>
+    </tr>
+    <tr>
+        <td><img src="../IMG/BasketAdd.png" style="vertical-align: middle">Add to basket</td>
+        <td><img src="../IMG/BasketAdd.png" style="vertical-align: middle">Add to basket</td>
+        <td><img src="../IMG/BasketAdd.png" style="vertical-align: middle">Add to basket</td>
+    </tr>
+    <tr>
+        <td >In your <img src="../IMG/basket.png" width="50" height="50" style="vertical-align: middle">
+            <span id="qtyBasket">_____</span> article(s) <br>
+            for a total of € <span id="amountBasket">_____</span>
+        </td>
+        <td hidden></td>
+        <td hidden></td>
+    </tr>
+</table>
 
 </body>
 </html>

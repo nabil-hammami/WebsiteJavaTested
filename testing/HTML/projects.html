@@ -28,55 +28,56 @@
             <img src="../IMG/onlineStoreWorkflow.png">
             <!-- FEATURES -->
             <h4>The features I want for the login page</h4>
-            <div class="Gherkin">
-                <span><span
-                        id="keyword">Feature:</span> Project Online Store : Authentication on the login page<br></span>
-                <span>  Only registered customer should be able to log in<br></span>
-                <span>  Valid credentials are login=Peter and password=Parker<br><br></span>
-                <span>  <span
-                        id="keyword">Scenario:</span> I shouldn't be able to log in if the login is missing<br></span>
-                <span>    <span id="keyword">Given</span> I am connected on the log in page<br></span>
-                <span>    <span id="keyword">When</span> I fill the password<br></span>
-                <span>    <span id="keyword">And</span> the login is empty<br></span>
-                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
-                <span>    <span id="keyword">Then</span> an error message telling me "The login is mandatory" must be displayed<br><br></span>
-                <span>  <span id="keyword">Scenario:</span> I shouldn't be able to login if the password is missing<br></span>
-                <span>    <span id="keyword">Given</span> I am connected on the log in page<br></span>
-                <span>    <span id="keyword">When</span> I fill the login<br></span>
-                <span>    <span id="keyword">And</span> the password is empty<br></span>
-                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
-                <span>    <span id="keyword">Then</span> an error message saying "The password is mandatory" must be displayed<br><br></span>
+            <img src="../IMG/eCommerceLogInFeature.png">
+<!--            <div class="Gherkin">-->
+<!--                <span><span-->
+<!--                        id="keyword">Feature:</span> Project Online Store : Authentication on the login page<br></span>-->
+<!--                <span>  Only registered customer should be able to log in<br></span>-->
+<!--                <span>  Valid credentials are login=Peter and password=Parker<br><br></span>-->
+<!--                <span>  <span-->
+<!--                        id="keyword">Scenario:</span> I shouldn't be able to log in if the login is missing<br></span>-->
+<!--                <span>    <span id="keyword">Given</span> I am connected on the log in page<br></span>-->
+<!--                <span>    <span id="keyword">When</span> I fill the password<br></span>-->
+<!--                <span>    <span id="keyword">And</span> the login is empty<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I click on the submit button<br></span>-->
+<!--                <span>    <span id="keyword">Then</span> an error message telling me "The login is mandatory" must be displayed<br><br></span>-->
+<!--                <span>  <span id="keyword">Scenario:</span> I shouldn't be able to login if the password is missing<br></span>-->
+<!--                <span>    <span id="keyword">Given</span> I am connected on the log in page<br></span>-->
+<!--                <span>    <span id="keyword">When</span> I fill the login<br></span>-->
+<!--                <span>    <span id="keyword">And</span> the password is empty<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I click on the submit button<br></span>-->
+<!--                <span>    <span id="keyword">Then</span> an error message saying "The password is mandatory" must be displayed<br><br></span>-->
 
-                <span>  <span id="keyword">Scenario:</span> As a registered user, I should be able to log in with my login and password<br></span>
-                <span>    <span id="keyword">Given</span> I am a registered user<br></span>
-                <span>    <span id="keyword">When</span> I fill my login<br></span>
-                <span>    <span id="keyword">And</span> I fill my password<br></span>
-                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
-                <span>    <span id="keyword">Then</span> the Order page must be displayed<br><br></span>
+<!--                <span>  <span id="keyword">Scenario:</span> As a registered user, I should be able to log in with my login and password<br></span>-->
+<!--                <span>    <span id="keyword">Given</span> I am a registered user<br></span>-->
+<!--                <span>    <span id="keyword">When</span> I fill my login<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I fill my password<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I click on the submit button<br></span>-->
+<!--                <span>    <span id="keyword">Then</span> the Order page must be displayed<br><br></span>-->
 
-                <span>  <span id="keyword">Scenario:</span> Login and passwords are case sensitive<br></span>
-                <span>    <span id="keyword">Given</span> I am a registered user<br></span>
-                <span>    <span id="keyword">When</span> I fill a &lt;login&gt;<br></span>
-                <span>    <span id="keyword">And</span> I fill a &lt;password&gt;<br></span>
-                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
-                <span>    <span id="keyword">Then</span> an error message saying "Invalid credentials" must be displayed<br></span>
-                <span>    <span id="keyword">Examples:</span><br></span>
-                <span>        | login | password |<br></span>
-                <span>        | peter | parker   |<br></span>
-                <span>        | pEtEr | pArkeR   |<br><br></span>
+<!--                <span>  <span id="keyword">Scenario:</span> Login and passwords are case sensitive<br></span>-->
+<!--                <span>    <span id="keyword">Given</span> I am a registered user<br></span>-->
+<!--                <span>    <span id="keyword">When</span> I fill a &lt;login&gt;<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I fill a &lt;password&gt;<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I click on the submit button<br></span>-->
+<!--                <span>    <span id="keyword">Then</span> an error message saying "Invalid credentials" must be displayed<br></span>-->
+<!--                <span>    <span id="keyword">Examples:</span><br></span>-->
+<!--                <span>        | login | password |<br></span>-->
+<!--                <span>        | peter | parker   |<br></span>-->
+<!--                <span>        | pEtEr | pArkeR   |<br><br></span>-->
 
-                <span>  <span
-                        id="keyword">Scenario:</span> I shouldn't be able to log in with invalid credentials<br></span>
-                <span>    <span id="keyword">Given</span> I am not a registered user<br></span>
-                <span>    <span id="keyword">When</span> I fill a &lt;login&gt;<br></span>
-                <span>    <span id="keyword">And</span> I fill a &lt;password&gt;<br></span>
-                <span>    <span id="keyword">And</span> I click on the submit button<br></span>
-                <span>    <span id="keyword">Then</span> an error message saying "Invalid credentials" must be displayed<br></span>
-                <span>    <span id="keyword">Examples</span><br></span>
-                <span>        | login | password |<br></span>
-                <span>        | admin | 1234     |<br></span>
-                <span>        | Chuck | Norris   |<br></span>
-            </div>
+<!--                <span>  <span-->
+<!--                        id="keyword">Scenario:</span> I shouldn't be able to log in with invalid credentials<br></span>-->
+<!--                <span>    <span id="keyword">Given</span> I am not a registered user<br></span>-->
+<!--                <span>    <span id="keyword">When</span> I fill a &lt;login&gt;<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I fill a &lt;password&gt;<br></span>-->
+<!--                <span>    <span id="keyword">And</span> I click on the submit button<br></span>-->
+<!--                <span>    <span id="keyword">Then</span> an error message saying "Invalid credentials" must be displayed<br></span>-->
+<!--                <span>    <span id="keyword">Examples</span><br></span>-->
+<!--                <span>        | login | password |<br></span>-->
+<!--                <span>        | admin | 1234     |<br></span>-->
+<!--                <span>        | Chuck | Norris   |<br></span>-->
+<!--            </div>-->
             <!-- MOCK UP -->
             <h4> Mock-up of the goal. </h4>
             <p>

@@ -37,7 +37,7 @@ article h1 {
     text-align: center;
 }
 
-section h4{
+section h4 {
     text-decoration-line: underline;
     text-align: center;
 }
@@ -65,7 +65,7 @@ li {
     text-decoration-line: none;
 }
 
-.mainMenu:hover{
+.mainMenu:hover {
     color: darkred;
     font-size: 25px;
     padding-left: 15px;
@@ -86,16 +86,16 @@ li {
     white-space: normal;
 }
 
-.Gherkin span{
+.Gherkin span {
     white-space: pre;
 }
 
-.Gherkin #keyword{
+.Gherkin #keyword {
     color: chocolate;
 }
 
 /* eCommerce Log in page*/
-#eCommerceLoginBody{
+#eCommerceLoginBody {
     background-image: url("../IMG/shoppingMall.jpg");
     background-repeat: no-repeat;
     background-color: black;
@@ -103,14 +103,14 @@ li {
     text-align: center;
 }
 
-#eCommerceLoginBody h1{
+#eCommerceLoginBody h1 {
     font-size: 40px;
     color: white;
     border: 2px solid white;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-#helper{
+#helper {
     color: white;
     font-size: 20px;
     background-color: black;
@@ -118,7 +118,7 @@ li {
     white-space: pre;
 }
 
-#loginErrorMessage{
+#loginErrorMessage {
     white-space: pre;
     color: red;
     background-color: white;
@@ -129,10 +129,32 @@ li {
 }
 
 /* eCommerce Orders page*/
-#eCommerceOrdersBody{
+#eCommerceOrdersBody {
     background-image: url("../IMG/eCommerceOrdersBackground.png");
     background-repeat: no-repeat;
     background-color: black;
     background-size: cover;
     text-align: center;
+}
+
+#eCommerceTable {
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-spacing: 15px;
+
+}
+
+#eCommerceTable td {
+    border: 2px solid white;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0px 10px 5px 10px;
+}
+
+.price{
+    border: 2px solid white;
+    padding: 2px 5px 2px 5px;
+    text-align: right;
+    background-color: cornflowerblue;
+    color: black;
 }
